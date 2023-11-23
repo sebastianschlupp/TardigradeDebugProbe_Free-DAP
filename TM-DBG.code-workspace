@@ -1,0 +1,88 @@
+{
+	"folders": [
+		{
+			"name": "Workspace",
+			"path": "."
+		},/*
+		{
+			"name": "CMSIS-DAP",
+			"path": "../CMSIS-DAP"
+		},*/
+		{
+			"name": "FREE-DAP",
+			"path": "../free-dap"
+		}
+	],
+
+	"settings": {
+		"git.autoRepositoryDetection": true,
+		"git.fetchOnPull": true,
+
+		"C_Cpp.default.compilerPath": "/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/arm-none-eabi-gcc",
+		"C_Cpp.default.includePath": [
+			"${workspaceFolder:Workspace}",
+			"${workspaceFolder:Workspace}/include",
+			"${workspaceFolder:free-dap}",
+			"/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/include",
+			"/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-non-eabi/include"
+		],
+		"C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+		"makefile.makefilePath": "${workspaceFolder}/make",
+		
+		"cmake.configureOnOpen": false,
+
+		// The number of spaces a tab is equal to. This setting is overridden
+		// based on the file contents when `editor.detectIndentation` is true.
+		"editor.tabSize": 8,
+
+		// Insert spaces when pressing Tab. This setting is overriden
+		// based on the file contents when `editor.detectIndentation` is true.
+		"editor.insertSpaces": false,
+
+		// When opening a file, `editor.tabSize` and `editor.insertSpaces`
+		// will be detected based on the file contents. Set to false to keep
+		// the values you've explicitly set, above.
+		"editor.detectIndentation": false,
+		"editor.rulers": [100],
+
+		"editor.cursorBlinking": "smooth",
+
+		"files.trimFinalNewlines": true,
+		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": [],
+
+		"editor.renderWhitespace": "all",
+
+		"editor.renderControlCharacters": false,
+		"cortex-debug.variableUseNaturalFormat": false,
+		"github.gitProtocol": "ssh",
+		"github.gitAuthentication": true,
+		"esbonio.sphinx.confDir": "",
+		"files.associations": {
+			"samd21e18a.h": "c",
+			"hal_gpio.h": "c"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-vscode.makefile-tools",
+			"ms-python.python",
+			"lextudio.restructuredtext",
+			"trond-snekvik.simple-rst",
+			
+			"marus25.cortex-debug",
+			"mcu-debug.debug-tracker-vscode",
+			"ms-vscode.vscode-embedded-tools",
+			"ms-vscode.vscode-serial-monitor",
+			"mcu-debug.rtos-views",
+
+			"mhutchie.git-graph",
+			"GitHub.github-vscode-theme",
+			"fabiospampinato.vscode-open-in-github",
+			"dodonew.zephyr-color-log",
+
+			"cschlosser.doxdocgen"
+		]
+	}
+}
