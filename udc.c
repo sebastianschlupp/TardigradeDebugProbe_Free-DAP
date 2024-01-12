@@ -396,4 +396,3 @@ void irq_handler_usb(void)
     }
   }
 }
-

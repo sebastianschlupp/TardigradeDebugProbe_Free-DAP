@@ -24,6 +24,9 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.*/
+#define __SAMD21J18A__
+#define F_CPU 48000000
+#define DONT_USE_CMSIS_INIT
 
 /*- Includes ----------------------------------------------------------------*/
 #include <stdlib.h>

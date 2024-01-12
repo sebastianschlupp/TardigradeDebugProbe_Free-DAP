@@ -17,6 +17,7 @@ HAL_GPIO_PIN(nTRST,        A, 7)
 HAL_GPIO_PIN(nRESET,       A, 7)
 
 HAL_GPIO_PIN(LED,          A, 15)
+HAL_GPIO_PIN(LED2,          A, 16)
 
 #define DAP_CONFIG_ENABLE_JTAG
 
@@ -30,7 +31,7 @@ HAL_GPIO_PIN(LED,          A, 15)
 
 // DAP_CONFIG_PRODUCT_STR must contain "CMSIS-DAP" to be compatible with the standard
 #define DAP_CONFIG_VENDOR_STR          "Tardigrade Marine"
-#define DAP_CONFIG_PRODUCT_STR         "Tardigrade Marine Debug Probe"
+#define DAP_CONFIG_PRODUCT_STR         "Tardigrade Marine CMSIS-DAP Debug Probe"
 #define DAP_CONFIG_SER_NUM_STR         "123456"
 #define DAP_CONFIG_CMSIS_DAP_VER_STR   "1.3.0"
 

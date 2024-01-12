@@ -60,7 +60,9 @@
 		"esbonio.sphinx.confDir": "",
 		"files.associations": {
 			"samd21e18a.h": "c",
-			"hal_gpio.h": "c"
+			"hal_gpio.h": "c",
+			"samd21.h": "c",
+			"samd21j18a.h": "c"
 		}
 	},
 	"extensions": {
