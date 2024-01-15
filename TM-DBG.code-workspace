@@ -3,14 +3,14 @@
 		{
 			"name": "Workspace",
 			"path": "."
-		},/*
-		{
-			"name": "CMSIS-DAP",
-			"path": "../CMSIS-DAP"
-		},*/
+		},
 		{
 			"name": "FREE-DAP",
 			"path": "../free-dap"
+		},
+		{
+			"name": "parent",
+			"path": ".."
 		}
 	],
 
