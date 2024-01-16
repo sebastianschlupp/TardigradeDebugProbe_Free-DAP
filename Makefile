@@ -1,6 +1,6 @@
 ##############################################################################
 BUILD = build
-BIN = TM-dap
+BIN = TM-dap_d21_nobl
 
 ifdef GNUARMEMB_TOOLCHAIN_PATH
 	COMP_PATH := $(GNUARMEMB_TOOLCHAIN_PATH)
@@ -15,12 +15,12 @@ OBJCOPY = $(COMP_PATH)/arm-none-eabi-objcopy
 SIZE = $(COMP_PATH)/arm-none-eabi-size
 
 ifeq ($(OS), Windows_NT)
-	MKDIR = gmkdir
+  MKDIR = gmkdir
 else
-	MKDIR = mkdir
+  MKDIR = mkdir
 endif
 
-CFLAGS += -W -Wall -Wextra --std=gnu11 -Os
+CFLAGS += -W -Wall --std=gnu11 -Os
 CFLAGS += -fno-diagnostics-show-caret
 CFLAGS += -fdata-sections -ffunction-sections
 CFLAGS += -funsigned-char -funsigned-bitfields
@@ -30,21 +30,26 @@ CFLAGS += -flto
 
 LDFLAGS += -mcpu=cortex-m0plus -mthumb
 LDFLAGS += -Wl,--gc-sections
-LDFLAGS += -Wl,--script=./linker/samd21j18.ld
+LDFLAGS += -Wl,--script=./linker/samd21j18_nobl.ld
 LDFLAGS += -flto
 
 INCLUDES += \
   -I./include \
+  -I./usb \
   -I../.. \
   -I.
 
 SRCS += \
   ../free-dap/dap.c \
   ./main.c \
-  ./udc.c \
-  ./usb.c \
+  ./uart.c \
+  ./usb/usb_samd21.c \
+  ./usb/usb_std.c \
+  ./usb/usb_cdc.c \
+  ./usb/usb_hid.c \
+  ./usb/usb_winusb.c \
   ./usb_descriptors.c \
-  ./startup_samd21.c
+  ./startup_samd21.c \
 
 DEFINES += \
   -D__SAMD21J18A__ \
